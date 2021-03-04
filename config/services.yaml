@@ -29,3 +29,13 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\Service\Question\QuestionService:
+        class: App\Service\Question\QuestionService
+        public: true
+        arguments:
+            $storage: "@App\\Storage\\JSON\\JsonStorage"
+            $storageModel: "@App\\Storage\\JSON\\Model\\Question"
+            $encoder: "@App\\Encoder\\JSON\\JsonEncoder"
+            $decoder: "@App\\Decoder\\JSON\\JsonDecoder"
+            $translator: "@App\\Service\\Translator\\GoogleTranslator"
