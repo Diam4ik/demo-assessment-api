@@ -1,4 +1,4 @@
-[WIP] Assessment API
+[WIP] Demo Assessment API
 ==============
 
 ## Requirements
